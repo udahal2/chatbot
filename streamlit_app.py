@@ -2,23 +2,23 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title(" ::W E L C O M E:: ")
+st.title("   : :    W E L C O M E          : : ")
 st.write(
     """Hello Everyone,
         Thank you for visiting here !"""
 )
 
 
-# Ask user for their OpenAI API key via `st.text_input`.
+# Ask user for their youtube_api_key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
-openai_api_key = st.text_input("OpenAI API Key", type="password")
-if not openai_api_key:
-    st.info("Please add your OpenAI API key to continue.", icon="🗝️")
+youtube_api_key = st.text_input("youtube_api_key", type="password")
+if not youtube_api_key:
+    st.info("Please add your youtube_api_key to continue.", icon="🗝️")
 else:
 
     # Create an OpenAI client.
-    client = OpenAI(api_key=openai_api_key)
+    client = OpenAI(api_key=youtube_api_key)
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
